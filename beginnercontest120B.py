@@ -3,9 +3,5 @@ a, b, k = map(int, input().split())
 array1 = []
 array2 = []
 
-array1 = [i for i in range(1, a+1) if a % i == 0]
-array2 = [i for i in range(1, b+1) if b % i == 0]
-
-array = list(set(array1) & set(array2))
-array.sort()
+array = [i for i in range(1, 101) if a % i + b % i < 1]
 print(array[-k])
